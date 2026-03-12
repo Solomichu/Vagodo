@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cd \"/c/Users/Miguel Bouza iCODA/Desktop/michi/may-26/michi-pwa\" && npx tsc --noEmit 2>&1 | head -30)",
+      "Bash(cd \"/c/Users/Miguel Bouza iCODA/Desktop/michi/may-26/michi-pwa\" && npx tsc --noEmit 2>&1 | tail -10)",
+      "Bash(cd \"/c/Users/Miguel Bouza iCODA/Desktop/michi/may-26/michi-pwa\" && npx tsc --noEmit 2>&1 | tail -20)",
+      "Bash(find \"/c/Users/Miguel Bouza iCODA/Desktop/michi/may-26/michi-pwa\" -name \"*image*\" -o -name \"*fail*\" 2>/dev/null | head -20)"
+    ]
+  }
+}

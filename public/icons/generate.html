@@ -1,0 +1,20 @@
+<!-- placeholder icon generator - open in browser and save -->
+<canvas id="c" width="512" height="512"></canvas>
+<script>
+const c = document.getElementById('c');
+const ctx = c.getContext('2d');
+// Background
+ctx.fillStyle = '#E8E4DD';
+ctx.fillRect(0, 0, 512, 512);
+// Circle
+ctx.beginPath();
+ctx.arc(256, 256, 180, 0, Math.PI * 2);
+ctx.fillStyle = '#E63B2E';
+ctx.fill();
+// Letter M
+ctx.font = 'bold 200px "Space Grotesk", sans-serif';
+ctx.fillStyle = '#F5F3EE';
+ctx.textAlign = 'center';
+ctx.textBaseline = 'middle';
+ctx.fillText('M', 256, 270);
+</script>

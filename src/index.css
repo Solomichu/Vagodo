@@ -1,0 +1,227 @@
+@import "tailwindcss";
+
+/* ── Brutalist Signal Design Tokens ─────────────────────────── */
+
+@theme {
+  --color-paper: #E8E4DD;
+  --color-signal: #E63B2E;
+  --color-surface: #F5F3EE;
+  --color-ink: #111111;
+  --color-ink-50: #11111180;
+  --color-ink-30: #1111114D;
+  --color-ink-15: #11111126;
+  --color-ink-08: #11111114;
+  --color-signal-light: #E63B2E1A;
+  --color-signal-medium: #E63B2E33;
+
+  --font-heading: "Space Grotesk", sans-serif;
+  --font-drama: "DM Serif Display", serif;
+  --font-data: "Space Mono", monospace;
+
+  --radius-card: 2rem;
+  --radius-button: 1.25rem;
+  --radius-input: 1rem;
+  --radius-pill: 9999px;
+}
+
+/* ── Base Reset ─────────────────────────────────────────────── */
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  overscroll-behavior: none;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-heading);
+  background-color: var(--color-surface);
+  color: var(--color-ink);
+  padding-top: env(safe-area-inset-top);
+  min-height: 100dvh;
+  letter-spacing: -0.01em;
+}
+
+/* ── Noise Overlay ──────────────────────────────────────────── */
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 256px 256px;
+}
+
+/* ── Typography ─────────────────────────────────────────────── */
+
+.font-drama {
+  font-family: var(--font-drama);
+}
+
+.font-data {
+  font-family: var(--font-data);
+}
+
+.tracking-brutalist {
+  letter-spacing: -0.03em;
+}
+
+/* ── Magnetic Buttons ───────────────────────────────────────── */
+
+.btn-magnetic {
+  transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              box-shadow 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.btn-magnetic:hover {
+  transform: scale(1.03);
+}
+
+.btn-magnetic:active {
+  transform: scale(0.97);
+}
+
+/* ── Card Transitions ───────────────────────────────────────── */
+
+.card-enter {
+  animation: cardEnter 0.25s ease-out;
+}
+
+@keyframes cardEnter {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ── Modal Slide Up ─────────────────────────────────────────── */
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-up {
+  animation: slideUp 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* ── Slide Down (detail panel) ─────────────────────────────── */
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-down {
+  animation: slideDown 0.2s ease-out;
+}
+
+/* ── Interactive Lift ───────────────────────────────────────── */
+
+.lift {
+  transition: transform 0.15s ease;
+}
+
+.lift:hover {
+  transform: translateY(-1px);
+}
+
+/* ── Scrollbar ──────────────────────────────────────────────── */
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  scrollbar-width: none;
+}
+
+/* ── iOS Input Zoom Prevention ──────────────────────────────── */
+
+input,
+textarea,
+select {
+  font-size: 16px;
+}
+
+/* ── Bottom Nav Safe Area ───────────────────────────────────── */
+
+.pb-nav {
+  padding-bottom: calc(5rem + env(safe-area-inset-bottom));
+}
+
+/* ── Card Flip ─────────────────────────────────────────────── */
+
+.flip-container {
+  perspective: 1200px;
+}
+
+.flip-card {
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.flip-card.flipped {
+  transform: rotateY(180deg);
+}
+
+.flip-face,
+.flip-back {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.flip-back {
+  transform: rotateY(180deg);
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+}
+
+/* ── Macro Colors ───────────────────────────────────────────── */
+
+/* ── Dashboard Collapse ────────────────────────────────────── */
+
+.dashboard-collapse {
+  transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+              opacity 0.25s ease;
+  overflow: hidden;
+}
+
+/* ── Macro Colors ───────────────────────────────────────────── */
+
+.macro-protein { color: #2563EB; }
+.macro-carbs   { color: #D97706; }
+.macro-fat     { color: #7C3AED; }
+.macro-cal     { color: #E63B2E; }
+
+.bg-macro-protein { background-color: #2563EB; }
+.bg-macro-carbs   { background-color: #D97706; }
+.bg-macro-fat     { background-color: #7C3AED; }
+.bg-macro-cal     { background-color: #E63B2E; }
