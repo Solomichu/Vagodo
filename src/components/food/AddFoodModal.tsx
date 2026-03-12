@@ -21,7 +21,6 @@ import {
   correctIngredients,
   compressImage,
   type EstimatedPlate,
-  type EstimatedFood,
 } from "@/lib/ai/useNutritionAi";
 import type { MealType } from "@/types";
 

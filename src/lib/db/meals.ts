@@ -1,7 +1,7 @@
 import { db } from "@/lib/db";
 import { newId } from "@/lib/ids";
 import { todayKey } from "@/lib/dates";
-import type { Meal, FoodItem, MealType, NutritionGoals } from "@/types";
+import type { FoodItem, MealType, NutritionGoals } from "@/types";
 
 // ─── Meals CRUD ─────────────────────────────────────────────
 

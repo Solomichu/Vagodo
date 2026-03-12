@@ -1,5 +1,5 @@
 import { useLiveQuery } from "dexie-react-hooks";
-import { CalendarDays, Clock, CheckCircle2, UtensilsCrossed } from "lucide-react";
+import { Clock, CheckCircle2, UtensilsCrossed } from "lucide-react";
 import { Modal } from "./Modal";
 import { db } from "@/lib/db";
 import { formatDateShort } from "@/lib/dates";
