@@ -87,7 +87,7 @@ export function nutritionContextToPrompt(nutrition: NutritionContext): string {
 
 export function buildSystemPrompt(context: AiContext): string {
   const nameStr = context.userName ? ` El usuario se llama ${context.userName}.` : "";
-  return `Eres Michi, un asistente personal de productividad inteligente.${nameStr} Responde siempre en español. Sé breve, directo y útil.
+  return `Eres Vagodo, un asistente personal de productividad inteligente.${nameStr} Responde siempre en español. Sé breve, directo y útil.
 
 CONTEXTO ACTUAL:
 Fecha: ${context.currentDate} | Hora: ${context.currentTime}

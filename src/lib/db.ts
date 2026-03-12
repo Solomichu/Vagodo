@@ -12,7 +12,7 @@ import type {
   AppSetting,
 } from "@/types";
 
-class MichiDb extends Dexie {
+class VagodoDb extends Dexie {
   tasks!: Table<Task, string>;
   taskLists!: Table<TaskList, string>;
   habits!: Table<Habit, string>;
@@ -25,7 +25,7 @@ class MichiDb extends Dexie {
   appSettings!: Table<AppSetting, string>;
 
   constructor() {
-    super("michi-pwa");
+    super("vagodo");
 
     this.version(1)
       .stores({
@@ -62,4 +62,4 @@ class MichiDb extends Dexie {
   }
 }
 
-export const db = new MichiDb();
+export const db = new VagodoDb();

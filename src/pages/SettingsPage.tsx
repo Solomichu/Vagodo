@@ -62,7 +62,7 @@ export function SettingsPage() {
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
     a.href = url;
-    a.download = `michi-backup-${new Date().toISOString().split("T")[0]}.json`;
+    a.download = `vagodo-backup-${new Date().toISOString().split("T")[0]}.json`;
     a.click();
     URL.revokeObjectURL(url);
   };
@@ -122,7 +122,7 @@ export function SettingsPage() {
             placeholder="Ej: Miguel"
           />
           <p className="text-[10px] text-ink-30 mt-1">
-            Michi te saludará por tu nombre.
+            Vagodo te saludará por tu nombre.
           </p>
         </Card>
 

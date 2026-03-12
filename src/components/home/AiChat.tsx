@@ -358,7 +358,7 @@ export function AiChat() {
           value={input}
           onChange={(e) => setInput(e.target.value)}
           onKeyDown={(e) => e.key === "Enter" && !e.shiftKey && handleSend()}
-          placeholder="Pregunta a Michi..."
+          placeholder="Pregunta a Vagodo..."
           className="flex-1 bg-transparent text-sm focus:outline-none placeholder:text-ink-30"
           disabled={isLoading}
         />

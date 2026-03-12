@@ -26,7 +26,7 @@ export function HomePage() {
       {/* ── Header ── */}
       <div className="shrink-0 flex items-start justify-between px-4 pt-4 pb-2">
         <div>
-          <h1 className="text-2xl font-bold tracking-brutalist">Michi</h1>
+          <h1 className="text-2xl font-bold tracking-brutalist">Vagodo</h1>
           <p className="text-sm text-ink-50 mt-0.5">{todayStr}</p>
         </div>
         <div className="flex items-center gap-0.5">

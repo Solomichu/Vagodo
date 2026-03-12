@@ -12,8 +12,8 @@ export default defineConfig({
       registerType: "autoUpdate",
       includeAssets: ["icons/*.png", "apple-touch-icon.png"],
       manifest: {
-        name: "Michi — Gestión Personal",
-        short_name: "Michi",
+        name: "Vagodo — Gestión Personal",
+        short_name: "Vagodo",
         description: "Tu asistente de productividad personal",
         theme_color: "#E8E4DD",
         background_color: "#F5F3EE",
